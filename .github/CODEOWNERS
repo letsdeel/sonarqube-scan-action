@@ -1,1 +1,5 @@
 .github/CODEOWNERS @sonarsource/analysis-experience-squad
+
+
+/.github/**/*.yml      @letsdeel/devops
+/.github/**/*.yaml     @letsdeel/devops

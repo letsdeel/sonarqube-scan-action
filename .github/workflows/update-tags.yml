@@ -7,7 +7,7 @@ on:
 
 jobs:
   generate:
-    runs-on: [ "global-reporting${{ github.ref_name == 'master' && '-prod' || github.ref_name == 'dev' && '-dev' || github.ref_name == 'release-dev' && '-release-dev' || '' }}" ]
+    runs-on: [ "${{ github.ref_name == 'master' && vars.GLOBAL_REPORTING_PROD || github.ref_name == 'dev' && vars.GLOBAL_REPORTING_DEV || github.ref_name == 'release-dev' && vars.GLOBAL_REPORTING_RELEASE_DEV || vars.GLOBAL_REPORTING }}" ]
     permissions:
       contents: write
 
